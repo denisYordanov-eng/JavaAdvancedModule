@@ -32,7 +32,7 @@ class planet {
         this.y = y;
     }
 
-    public boolean IsInRange(double spaceShipX, double spaceShipY) {
+    public boolean isInRange(double spaceShipX, double spaceShipY) {
         return spaceShipX >=(x - 1) &&  spaceShipX <= (x + 1)
                 && spaceShipY >= (y - 1) &&  spaceShipY <= (y + 1);
 
@@ -71,7 +71,7 @@ public class ToTheStars_12 {
             String location = "space";
 
             for (planet planet : planets) {
-                if (planet.IsInRange(spaceShipX, spaceShipY)) {
+                if (planet.isInRange(spaceShipX, spaceShipY)) {
                     location = planet.getPlanetName();
                     break;
                 }
