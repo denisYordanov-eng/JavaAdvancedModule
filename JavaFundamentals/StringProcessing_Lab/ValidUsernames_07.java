@@ -8,9 +8,9 @@ public class ValidUsernames_07 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String regex = "^(?=.{3,16}$)(?!.*[-_]{2})[A-Za-z0-9](?:[A-Za-z0-9]|[-_](?=[A-Za-z0-9]))*[A-Za-z0-9]$";
+        String regex = "^[\\w-]{3,16}$";
         Pattern pattern = Pattern.compile(regex);
-        String inputLine =  scanner.nextLine().replaceAll("\\r\\n","").trim();
+        String inputLine =  scanner.nextLine().trim();
         while (!inputLine.equals("END")){
         Matcher matcher = pattern.matcher(inputLine);
         if (matcher.matches()){
@@ -18,7 +18,7 @@ public class ValidUsernames_07 {
         }else {
             System.out.println("invalid");
         }
-            inputLine =  scanner.nextLine().replaceAll("\\r\\n","").trim();
+            inputLine =  scanner.nextLine().trim();
         }
     }
 }
