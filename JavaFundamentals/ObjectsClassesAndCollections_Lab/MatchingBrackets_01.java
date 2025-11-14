@@ -16,7 +16,7 @@ public class MatchingBrackets_01 {
     }
 
     private static void findExpressions(ArrayDeque<Integer> stack, String input) {
-        //make a for loop to length of input
+        //make a for loop to length of the input
         for (int i = 0; i < input.length(); i++) {
             char currentChar = input.charAt(i); // make a current char of input
             if(currentChar =='('){// if current char == '(' push current index to stack
