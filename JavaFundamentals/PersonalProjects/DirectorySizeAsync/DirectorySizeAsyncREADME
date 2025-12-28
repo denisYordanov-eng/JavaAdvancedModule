@@ -1,6 +1,10 @@
 How to use:
-* Copy then past the path of first directory.
-* Then copy then past the path of the second dyrectory.
+* Copy then paste the path of the first directory.
+* Then copy then paste the path of the second dyrectory.
 * Click enter and will see the size of first directory then the second.
 
-*The purpose of the project is training asynchronous programing in java and working with File class.
+* The purpose of the project is training asynchronous programing in java and working with File class.
+
+* Examples:
+C:\Users\Laptop\Downloads\08. Java-Advanced-Files-and-Streams-Lab-Resources
+C:\Users\Laptop\Documents\NumbersFrom1To50-project
