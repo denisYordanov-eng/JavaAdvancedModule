@@ -1,0 +1,11 @@
+                                                  StackAndQueueIntegrator
+
+* Type some numbers separated by space to fill the stack. 
+* Press enter.
+* Typo some numbers separated by space to fill the queue.
+* press enter.
+
+* The output should be total sum and every even sum of last element of stack and first element of queue. It should be printed in natural order.
+
+* The main purpose of the project is training stack and queue flows and training sets stream sorting.
+
