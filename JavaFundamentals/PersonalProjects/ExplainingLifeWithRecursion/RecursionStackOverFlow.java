@@ -10,7 +10,7 @@ public class RecursionStackOverFlow {
       }
     }
 
-    private static int life(int a, int b) {
-        return a + life(a, b + 1);
+    private static int life(int yearOfBirth, int currentYear) {
+        return yearOfBirth + life(yearOfBirth, currentYear + 1);
     }
 }
