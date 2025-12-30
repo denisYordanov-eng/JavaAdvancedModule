@@ -11,6 +11,7 @@ public class RecursionStackOverFlow {
     }
 
     private static int life(int yearOfBirth, int currentYear) {
+        //just add another year of living
         return yearOfBirth + life(yearOfBirth, currentYear + 1);
     }
 }
