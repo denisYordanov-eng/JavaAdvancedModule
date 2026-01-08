@@ -43,8 +43,7 @@ public class BasicStackOperations_08 {
 
     private static int findSmallestNumberInStack(ArrayDeque<Integer> stack) {
         int smallestNumber = Integer.MAX_VALUE;
-        for (int i = 0; i < stack.size(); i++) {
-           int currentNumber = stack.peek();
+        for (int currentNumber: stack) {
            if (currentNumber < smallestNumber) {
                smallestNumber = currentNumber;
            }
