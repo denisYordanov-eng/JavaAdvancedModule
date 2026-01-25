@@ -3,7 +3,7 @@ The main focus is training composition like the skater class has skateboard obje
 And training making methods inside a class and use them in main class.
 I choose package-private access beacause I only want to see objects' methods inside this package
 
-Example Output:
+Example Input:
 
 Denis planB 8.25 Independent 149 spitfire 53 bonesReds
 Denis breakBoard
