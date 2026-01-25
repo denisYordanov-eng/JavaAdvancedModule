@@ -9,19 +9,6 @@ package DefiningClass_Exercises.Google;
          this.childBirthday = childBirthday;
      }
 
-     public String getChildName() {
-         return childName;
-     }
-
-     public String getChildBirthday() {
-         return childBirthday;
-     }
-
-     public void setChildName(String childName) {
-         this.childName = childName;
-     }
-     public void setChildBirthday(String childBirthday) {}
-
      @Override
      public String toString()
      {
