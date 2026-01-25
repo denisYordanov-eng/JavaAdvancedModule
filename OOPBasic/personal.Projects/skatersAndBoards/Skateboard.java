@@ -45,7 +45,7 @@ class Skateboard {
     public String toString() {
         return String.format("Deck: %s %.2f%n" +
                 "Trucks: %s %d%n" +
-                "%s %d%n" +
-                "%s%n", this.deckBrand, this.deckSize, this.truckBrand, this.truckSize, this.wheelsBrand, this.wheelsSize, this.bearingsBrand);
+                "Wheels: %s %d%n" +
+                "Bearings: %s%n", this.deckBrand, this.deckSize, this.truckBrand, this.truckSize, this.wheelsBrand, this.wheelsSize, this.bearingsBrand);
     }
 }
