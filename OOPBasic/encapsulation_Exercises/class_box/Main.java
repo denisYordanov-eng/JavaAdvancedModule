@@ -13,15 +13,19 @@ public class Main {
         double width = readDouble(reader);
         double height = readDouble(reader);
 
-        Box box = new Box(length, width, height);
+        try {
+            Box box = new Box(length, width, height);
+            printOutput(box);
+        }catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
 
-        printOutput(box);
     }
 
     private static void printOutput(Box box) {
-        System.out.printf("Surface Area - %.2f%n", box.calculateSurfaceArea());
-        System.out.printf("Lateral Surface Area - %.2f%n", box.calculateLateralSurfaceArea());
-        System.out.printf("Volume - %.2f", box.calculateVolumeArea());
+            System.out.printf("Surface Area - %.2f%n", box.calculateSurfaceArea());
+            System.out.printf("Lateral Surface Area - %.2f%n", box.calculateLateralSurfaceArea());
+            System.out.printf("Volume - %.2f", box.calculateVolumeArea());
     }
 
     private static double readDouble(BufferedReader reader) throws IOException {
