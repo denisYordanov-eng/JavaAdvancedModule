@@ -1,6 +1,6 @@
 package inheritance_lab;
 
-public class Dog extends Animal {
+ public class Dog extends Animal {
     void bark(){
         System.out.println("barking...");
     }

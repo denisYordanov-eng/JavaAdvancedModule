@@ -6,6 +6,7 @@ public class Main {
         dog.eat();
         dog.bark();
 
+
         Cat cat = new Cat();
         cat.eat();
         cat.meow();
