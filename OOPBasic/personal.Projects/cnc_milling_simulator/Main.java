@@ -39,7 +39,6 @@ public class Main {
             } catch (IllegalArgumentException iae) {
                 System.out.println(iae.getMessage());
             }
-
         }
     }
 

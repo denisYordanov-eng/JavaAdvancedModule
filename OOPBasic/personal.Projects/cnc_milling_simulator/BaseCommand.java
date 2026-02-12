@@ -5,7 +5,7 @@ public class BaseCommand {
 
     private  Point endPoint;
 
-    protected   double FeedRate;
+    protected   double feedRate;
 
     public BaseCommand(Point startPoint, Point endPoint, double feedRate) {
         this.startPoint = startPoint;
@@ -13,11 +13,11 @@ public class BaseCommand {
        setFeedRate(feedRate);
     }
 
-    public void setFeedRate(double feedRate) {
+    private void setFeedRate(double feedRate) {
         if (feedRate <= 0) {
             throw new IllegalArgumentException("feedRate must be greater than 0");
         }
-        FeedRate = feedRate;
+       this.feedRate = feedRate;
     }
 
     protected Point getStartPoint() {
@@ -29,6 +29,6 @@ public class BaseCommand {
     }
 
     protected double getFeedRate() {
-        return FeedRate;
+        return feedRate;
     }
 }
