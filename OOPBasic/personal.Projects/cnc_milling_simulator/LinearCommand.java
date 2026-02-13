@@ -21,7 +21,7 @@ public class LinearCommand extends BaseCommand {
     @Override
     public String toString() {
         return String.format("Milling from {X:%.2f, Y:%.2f, Z:%.2f} to {X:%.2f, Y:%.2f, Z:%.2f} with feedRate: %.2f," +
-                        " totalDistance: %.2f"
+                        " totalDistance: %.2f mm/min"
                 , getStartPoint().getX(), getStartPoint().getY(), getStartPoint().getZ()
         ,getEndPoint().getX(),getEndPoint().getY(), getEndPoint().getZ()
         ,getFeedRate(), calculateDistance());
