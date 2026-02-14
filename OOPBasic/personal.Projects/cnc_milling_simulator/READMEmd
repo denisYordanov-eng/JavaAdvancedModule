@@ -1,0 +1,29 @@
+CNC Milling G-Code Simulator
+
+A Java-based backend engine designed to parse and simulate CNC milling movements. This project demonstrates core Object-Oriented Programming (OOP) principles by modeling 3D toolpath trajectories and validating them against machine hardware constraints.
+
+ Features
+	G-Code Parsing:** Processes standard G0 linear commands.
+	3D Trajectory Calculation:** Implements 3D Euclidean distance formulas to calculate precise tool movement.
+	Safety Validation:** Built-in hardware limit checks (X, Y, Z axes) to prevent virtual machine crashes.
+	Production Metrics:** Calculates real-time feed rates, travel distances, and estimated machining time.
+	State Management:** Tracks the tool's position through a command queue, ensuring seamless transitions between points.
+
+ Technical Implementation
+	OOP Design: Utilizes inheritance and encapsulation. `"BaseCommand" provides the blueprint for specialized commands like "LinearCommand".
+	Data Structures: Uses "ArrayDeque" for efficient command queuing (FIFO) and "BufferedReader" for high-performance input processing.
+	Validation Logic: The "Point" class acts as a domain guard, enforcing physical machine boundaries.
+
+  Math & Logic
+	The simulator calculates the distance ($d$) between two points in a 3D Cartesian system using:
+		d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}$$
+
+Machining time is then estimated based on the provided Feed Rate (F):
+ Time = \frac{Distance}{F}$$
+
+  How to Run
+	1. Clone the repository.
+	2. Run "Main.java".
+	3.Input your G-code commands (e.g., `G0 X10 Y20 Z5 F500`).
+	4.Type `End` to execute the program and see the simulation results.
+	
