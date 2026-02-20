@@ -31,7 +31,7 @@ public class Main {
 
                         double feedRateValue = readValue(command[4]);
 
-                        LinearCommand linearCommand = new LinearCommand(startPoint, endPoint, feedRateValue);
+                       BaseCommand linearCommand = new LinearCommand(startPoint, endPoint, feedRateValue);
                         System.out.println(linearCommand);
                         startPoint = endPoint;
                         break;
