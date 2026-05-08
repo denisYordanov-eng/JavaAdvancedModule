@@ -19,7 +19,7 @@ public class Main {
                .sorted(Comparator.comparing(Method::getName))
                .forEach(m ->
                    System.out.printf("%s and will set field of %s%n"
-                   ,m.getName(),m.getParameterTypes()[0].getName()));
+                   ,m.getName(),m.getParameterTypes()[0]));
 
     }
 }
