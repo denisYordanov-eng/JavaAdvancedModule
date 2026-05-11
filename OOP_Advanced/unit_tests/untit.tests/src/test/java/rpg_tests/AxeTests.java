@@ -1,9 +1,8 @@
 package rpg_tests;
 
-import impl.Axe;
-import impl.Dummy;
+import models.Axe;
+import models.Dummy;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class AxeTests {
