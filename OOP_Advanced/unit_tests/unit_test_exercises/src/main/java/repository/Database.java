@@ -5,7 +5,7 @@ import interfaces.Databaseable;
 import javax.naming.OperationNotSupportedException;
 import java.util.Arrays;
 
-public class Database implements Databaseable {
+public class Database implements Databaseable<Integer> {
     private Integer[] arr;
     int arrSize;
 
@@ -50,7 +50,7 @@ public class Database implements Databaseable {
 
     @Override
     public Integer[] fetch() throws OperationNotSupportedException {
-        if (arr.length == 0) {
+        if (this.arrSize == 0) {
             throw new OperationNotSupportedException("The database is empty!");
         }
         Integer[] result = new Integer[arrSize];

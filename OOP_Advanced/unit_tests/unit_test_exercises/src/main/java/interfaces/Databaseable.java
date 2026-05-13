@@ -2,8 +2,8 @@ package interfaces;
 
 import javax.naming.OperationNotSupportedException;
 
-public interface Databaseable {
-    void add(Integer element) throws OperationNotSupportedException;
+public interface Databaseable<T> {
+    void add(T element) throws OperationNotSupportedException;
     void remove() throws OperationNotSupportedException;
-    Integer[] fetch () throws OperationNotSupportedException;
+    T[] fetch () throws OperationNotSupportedException;
 }
