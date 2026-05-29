@@ -1,0 +1,15 @@
+package core.commands;
+
+
+import exeptions.DuplicateModelException;
+
+public class CreateRowBoatCommand extends BaseCommand {
+
+    @Override
+    public String execute() throws DuplicateModelException {
+        String model = super.getParams().get(0);
+        int weight = Integer.parseInt(super.getParams().get(1));
+        int oars = Integer.parseInt(super.getParams().get(2));
+        return getBoatSimulatorController().createRowBoat(model, weight, oars);
+    }
+}
