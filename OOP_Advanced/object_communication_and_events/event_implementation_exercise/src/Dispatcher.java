@@ -30,7 +30,7 @@ public class Dispatcher implements Observable {
 
     @Override
     public void fireNameChangeEvent() {
-        NameChange event = new NameChange(this.name, this.name);
+        NameChange event = new NameChange(this, this.name);
         for(NameChangeListener listener : this.listeners){
             listener.handleChangedName(event);
         }
