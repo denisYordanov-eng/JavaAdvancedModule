@@ -1,4 +1,4 @@
-package panzer.Manager;
+package panzer.manager;
 
 import panzer.contracts.BattleOperator;
 import panzer.contracts.Manager;

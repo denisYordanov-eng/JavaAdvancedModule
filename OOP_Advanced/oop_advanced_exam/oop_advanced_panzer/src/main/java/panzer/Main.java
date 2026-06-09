@@ -1,6 +1,6 @@
 package panzer;
 
-import panzer.Manager.ManagerImpl;
+import panzer.manager.ManagerImpl;
 import panzer.contracts.InputReader;
 import panzer.contracts.Manager;
 import panzer.contracts.OutputWriter;
