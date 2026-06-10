@@ -49,9 +49,9 @@ public class VehicleAssembler implements Assembler {
         return this.arsenalParts.stream()
                 .mapToLong(part -> {
                     try {
-                        Object result = part.getClass().getDeclaredMethod("getAttackModifier").invoke(part);
+                        Object result = part.getClass().getMethod("getAttackModifier").invoke(part);
                         return ((Number) result).longValue();
-                    }catch (Exception e) {
+                    } catch (Exception e) {
                         return 0L;
                     }
                 })
@@ -63,9 +63,9 @@ public class VehicleAssembler implements Assembler {
         return this.shellParts.stream()
                 .mapToLong(part -> {
                     try {
-                       Object result = part.getClass().getDeclaredMethod("getDefenseModifier").invoke(part);
-                      return ((Number)result).longValue();
-                    }catch (Exception e) {
+                        Object result = part.getClass().getMethod("getDefenseModifier").invoke(part);
+                        return ((Number) result).longValue();
+                    } catch (Exception e) {
                         return 0L;
                     }
                 })
@@ -75,11 +75,11 @@ public class VehicleAssembler implements Assembler {
     @Override
     public long getTotalHitPointModification() {
         return this.enduranceParts.stream()
-                .mapToLong(part ->{
+                .mapToLong(part -> {
                     try {
-                        Object result = part.getClass().getDeclaredMethod("getHitPointsModifier").invoke(part);
-                         return((Number)result).longValue();
-                    }catch (Exception e) {
+                        Object result = part.getClass().getMethod("getHitPointsModifier").invoke(part);
+                        return ((Number) result).longValue();
+                    } catch (Exception e) {
                         return 0L;
                     }
                 })
@@ -88,16 +88,25 @@ public class VehicleAssembler implements Assembler {
 
     @Override
     public void addArsenalPart(Part arsenalPart) {
+        if (arsenalPart == null) {
+            throw new NullPointerException("arsenalPart cannot be null");
+        }
         this.arsenalParts.add(arsenalPart);
     }
 
     @Override
     public void addShellPart(Part shellPart) {
+        if (shellPart == null) {
+            throw new NullPointerException("ShellPart cannot be null");
+        }
         this.shellParts.add(shellPart);
     }
 
     @Override
     public void addEndurancePart(Part endurancePart) {
+        if (endurancePart == null) {
+            throw new NullPointerException("endurance part cannot be null");
+        }
         this.enduranceParts.add(endurancePart);
     }
 }
